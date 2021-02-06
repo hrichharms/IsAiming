@@ -38,7 +38,7 @@ class Mouse_thread(threading.Thread):
 
 if __name__ == "__main__":
 
-    session_dir = HOSTNAME + "_" + str(sha1(str(randint(1, 1e32)).encode()).hexdigest()[:13])
+    session_dir = HOSTNAME + "_" + sha1(str(randint(1, 1e32)).encode()).hexdigest()[:13]
     mkdir("Data/" + session_dir)
 
     t = Mouse_thread(session_dir)
