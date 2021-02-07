@@ -9,7 +9,7 @@ from hashlib import sha1
 from os import mkdir
 from os import getcwd
 
-SLEEP_LOWER, SLEEP_UPPER = [3, 3]
+SLEEP_LOWER, SLEEP_UPPER = [1, 1]
 WIDTH, HEIGHT = ImageGrab.grab().size
 HOSTNAME = gethostname()
 
@@ -43,6 +43,8 @@ if __name__ == "__main__":
 
     t = Mouse_thread(session_dir)
     t.start()
+
+    sleep(1000)
 
     try:
         while True:
