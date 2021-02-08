@@ -34,7 +34,7 @@ class Mouse_thread(threading.Thread):
                 state_left = a
                 if a < 0:
                     screenshot(self.session_dir)
-            sleep(0.1)
+                    sleep(0.1)
 
 if __name__ == "__main__":
 
