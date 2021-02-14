@@ -6,6 +6,7 @@ data = os.listdir("Data/FILTERED")
 
 labels = json.load(open("labels.json"))
 already_done = [i[1] for i in labels]
+print(len(already_done), "already labeled.")
 
 i = 0
 while data[i] in already_done: i += 1
