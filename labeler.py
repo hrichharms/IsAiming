@@ -3,9 +3,12 @@ import os
 import json
 
 data = os.listdir("Data/FILTERED")
-i = 0
 
 labels = json.load(open("labels.json"))
+already_done = [i[1] for i in labels]
+
+i = 0
+while data[i] in already_done: i += 1
 
 root = tk.Tk()
 img = tk.PhotoImage(file="Data/FILTERED/" + data[i])
